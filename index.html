@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>fe2.io</title>
+        <link rel="shortcut icon" type="image/png" href="images/FE2Logo.ico">
+        <link rel="stylesheet" href="index.css">
+    <head>
+
+    <body>
+        <div class="bg">
+            <div class="container">
+                <div class="fe2ioLogo">
+                    <img src="images/fe2iologo.png" width="400px">
+                </div>
+
+                <div class="fe2ioWindow">
+                    <div id="connectUI"> 
+                        <b>Enter Username:</b>
+                        <label id="setname"></label>
+                        <input type="text" id="uname">
+                        <button id="connectButton">Connect</button>
+                    </div>
+
+                    <div id="connectStatus" hidden="true">
+                        <b>Status:</b>
+                        <label id="fe2ioStatus"></label>
+                        <input id="refreshButton" type="button" value="Reload" onclick="refresh(this)" hidden="true">
+                    </div>
+
+                    <div id="bgmStatus" hidden="true">
+                        <b>Music: </b>
+                        <label id="bgmInfo"></label>
+                    </div>
+
+                    <br>
+
+                    <div> 
+                        <b>Volume: </b>
+                        <label id="volumeInfo">70%</label><br>
+                        <input type="range" min="0" max="100" value="70" class="slider" id="volumeRange" width="300px">
+                    </div>
+
+                    <br>
+
+                    <div> 
+                        <div> 
+                            <b>When player dies:</b><br>
+                            <input type="radio" id="deathQuietenRadio" name="deathType" value="quieten" checked="true">Quieten music
+                            <input type="radio" id="deathStopRadio" name="deathType" value="stop">Stop music
+                            <input type="radio" id="deathDisableRadio" name="deathType" value="off">No action
+                        </div>
+
+                        <br>
+
+                        <div> 
+                            <b id="leavingGameLabel">When player leaves:</b><br>
+                            <input type="radio" id="leaveStopRadio" name="leaveType" value="stop" checked="true">Stop music
+                            <input type="radio" id="leaveDisableRadio" name="leaveType" value="off">No action
+                        </div>
+                    </div>
+
+                    <div class="fe2ioMusic">
+                        <div id="currentlyPlaying">  
+                            <div id="bgmURLDisplay">
+                                <b style="font-size: 24px;">Jukebox</b>
+                                <br>
+                                <b>URL: </b>
+                                <br>
+                                <label id="bgmURLLabel">Waiting for music..</label>
+                            </div>  
+                            <br>
+    
+                            <button id="pauseButton">Pause</button>
+                            <button id="playButton">Play</button>
+                            <button id="downloadButton">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+
+
+
+                <br>
+
+                <div class="copyright">
+                    <p>[RBX-2-WEB Player V1.11] © Crazyblox Ltd 2023</p>
+                    <p>Modifications made by a456pur</p>
+                </div>
+
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+
+        <script src="fe2io.js"></script>
+
+
+        <audio preload="auto" src="https://github.com/anars/blank-audio/blob/master/250-milliseconds-of-silence.mp3?raw=true"></audio>
+        <audio preload="auto" src="https://github.com/anars/blank-audio/blob/master/250-milliseconds-of-silence.mp3?raw=true"></audio> 
+
+    </body>
+</html>
